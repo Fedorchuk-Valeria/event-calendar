@@ -25,3 +25,14 @@ input {
 option {
     font-family: 'Roboto', sans-serif;
 }
+
+button {
+    font-size: 40px;
+    padding: 15px;
+    background-color: #AD98C3;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    width: 230px;
+  }
