@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
+    display: flex;
+    justify-content: center;
+    padding-top: 80%;
+  }
+
+select, input {
+    background-color: #FFFF;
+    font-size: 60px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 550px;
+    height: 100px;
+}
+
+input {
+    width: 530px;
+    height: 80px;
+}
+
+option {
+    font-family: 'Roboto', sans-serif;
+}
