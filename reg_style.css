@@ -1,9 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(90deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
+    background: linear-gradient(150deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     justify-content: center;
     padding: 15%;
+    padding-bottom: 25%;
   }
 
 select, input {
