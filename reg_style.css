@@ -3,23 +3,23 @@ body {
     background: linear-gradient(90deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     justify-content: center;
-    padding-top: 80%;
+    padding-top: 10%;
   }
 
 select, input {
     background-color: #FFFF;
-    font-size: 60px;
+    font-size: 40px;
     border-radius: 20px;
     border: none;
     padding: 10px;
-    margin: 10px;
-    width: 550px;
-    height: 100px;
+    margin: 5px;
+    width: 350px;
+    height: 80px;
 }
 
 input {
-    width: 530px;
-    height: 80px;
+    width: 330px;
+    height: 60px;
 }
 
 option {
@@ -27,7 +27,7 @@ option {
 }
 
 button {
-    font-size: 40px;
+    font-size: 30px;
     padding: 15px;
     background-color: #AD98C3;
     color: #fff;
