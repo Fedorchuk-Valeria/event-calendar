@@ -3,7 +3,7 @@ body {
     background: linear-gradient(90deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     justify-content: center;
-    padding: 10%;
+    padding: 15%;
   }
 
 select, input {
@@ -13,11 +13,13 @@ select, input {
     border: none;
     width: 250px;
     height: 40px;
+    padding: 5px;
 }
 
 input {
-    width: 246px;
-    height: 36px;
+    width: 240px;
+    height: 30px;
+    padding: 5px;
 }
 
 option {
