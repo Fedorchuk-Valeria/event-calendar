@@ -1,11 +1,17 @@
+html {
+    height: 100%;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(150deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 15%;
-    padding-bottom: 25%;
-  }
+}
 
 select, input {
     background-color: #FFFF;
@@ -15,6 +21,7 @@ select, input {
     width: 250px;
     height: 40px;
     padding: 5px;
+    margin: 5px;
 }
 
 input {
@@ -30,10 +37,11 @@ option {
 button {
     font-size: 15px;
     padding: 8px;
+    margin: 5px;
     background-color: #AD98C3;
     color: #fff;
     border: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
     width: 70px;
-  }
+}
