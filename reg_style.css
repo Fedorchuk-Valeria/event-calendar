@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(150deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
+    background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,11 +13,11 @@ body {
     padding: 15%;
 }
 
-select, input {
-    background-color: #FFFF;
+select{
+    background-color: #ffffff;
     font-size: 20px;
     border-radius: 10px;
-    border: none;
+    border: 1px solid rgb(88, 86, 86);
     width: 250px;
     height: 40px;
     padding: 5px;
@@ -25,9 +25,14 @@ select, input {
 }
 
 input {
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(88, 86, 86);
+    margin: 5px;
     width: 240px;
     height: 30px;
-    padding: 5px;
+    padding: 3px;
 }
 
 option {
@@ -38,10 +43,10 @@ button {
     font-size: 15px;
     padding: 8px;
     margin: 5px;
-    background-color: #AD98C3;
-    color: #fff;
+    background-color: #fff;
+    color: #000000;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
     width: 70px;
 }
