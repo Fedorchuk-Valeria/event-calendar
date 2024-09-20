@@ -4,7 +4,6 @@ html {
 
 
 body {
-    font-family: 'Roboto', sans-serif;
     background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     flex-direction: column;
@@ -13,7 +12,7 @@ body {
     padding: 15%;
 }
 
-select{
+select {
     background-color: #ffffff;
     font-size: 20px;
     border-radius: 10px;
@@ -22,6 +21,7 @@ select{
     height: 40px;
     padding: 5px;
     margin: 5px;
+    font-family: 'Inter';
 }
 
 input {
@@ -30,14 +30,12 @@ input {
     border-radius: 10px;
     border: 1px solid rgb(88, 86, 86);
     margin: 5px;
-    width: 240px;
-    height: 30px;
-    padding: 4px;
+    width: 234px;
+    height: 25px;
+    padding: 7px;
+    font-family: 'Inter';
 }
 
-option {
-    font-family: 'Roboto', sans-serif;
-}
 
 button {
     font-size: 15px;
@@ -49,4 +47,5 @@ button {
     border-radius: 10px;
     transition: background-color 0.3s ease;
     width: 70px;
+    font-family: 'Inter';
 }

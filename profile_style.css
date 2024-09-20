@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
+    align-items: center;
+    padding: 15%;
+}
+
+span {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#teacherInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    font-family: 'Inter Light';
+    font-size: 18px;
+    color: #fff;
+}
+
+#infoWithImage {
+    display: flex;
+}
+
+#containerForalignLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
