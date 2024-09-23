@@ -1,6 +1,6 @@
 import {db, app, doc, setDoc, getDoc, updateDoc} from './firebase_connect.js'
 
-async function addUser(id, fullName, birthDay, phoneNumber, city, locs){
+async function addUser(id, fullName, birthDay, phoneNumber, city, locs, tg){
     await setDoc(doc(db, "users", fullName), {
         crmId: id,
         name: fullName,
@@ -8,7 +8,7 @@ async function addUser(id, fullName, birthDay, phoneNumber, city, locs){
         brunch: city,
         dob: birthDay,
         locations: locs,
-        telegram: ""
+        telegram: tg
       });
 }
 

@@ -53,7 +53,7 @@ async function getTeacherLessons(crm_id, brunch){
 
         const data = {
             "teacher_id": 13,
-            "status": 1
+            "status": 1,
         }
 
         return await fetch(url, {
