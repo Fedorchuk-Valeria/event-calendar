@@ -4,21 +4,49 @@ html {
 
 
 body {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     align-items: center;
-    padding: 15%;
+    justify-content: center;
+    padding: 5%;
 }
 
 span {
     background-color: #fff;
     padding: 8px;
+    margin-bottom: 5px;
     border-radius: 5px;
+    height: 20px;
+    display: inline-block;
+    width: 250px;
+}
+
+input {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: None;
+    height: 20px;
+    width: 200px;
+}
+
+button {
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+    background-color: #d46f60;
+    color: #292727;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    font-family: 'Inter';
 }
 
 #teacherInfo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 20px;
     font-family: 'Inter Light';
     font-size: 18px;
@@ -29,8 +57,7 @@ span {
     display: flex;
 }
 
-#containerForalignLeft {
+#locs {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }

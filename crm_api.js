@@ -30,7 +30,31 @@ async function find_teacher(number, br){
             "phone": number
         }
 
-        console.log(data)
+        return await fetch(url, {
+            method: "POST",
+            headers: head,
+            body: JSON.stringify(data),
+          }).then(
+                (response) => {return response.json()});
+
+    }
+    )
+}
+
+async function getTeacherLessons(crm_id, brunch){
+    return crm_auth().then(async (token_obj) => {
+        const head = {
+            "X-ALFACRM-TOKEN": token_obj.token
+        };
+
+        console.log(head)
+        
+        const url = "https://kiberoneminsk.s20.online/v2api/" + brunch + "/lesson/index";
+
+        const data = {
+            "teacher_id": 13,
+            "status": 1
+        }
 
         return await fetch(url, {
             method: "POST",
@@ -43,4 +67,5 @@ async function find_teacher(number, br){
     )
 }
 
-export { crm_auth, find_teacher }
+
+export { crm_auth, find_teacher, getTeacherLessons }

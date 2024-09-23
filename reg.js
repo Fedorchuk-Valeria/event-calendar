@@ -1,5 +1,5 @@
-import {db, app, doc, setDoc} from './firebase_connect.js'
-import { crm_auth, find_teacher } from './crm_api.js';
+import { find_teacher, getTeacherLessons } from './crm_api.js';
+import { addUser } from './db_query.js';
 
 document.getElementById("reg").addEventListener('click', e => {
     const number = document.getElementById("phone").value;
@@ -9,20 +9,26 @@ document.getElementById("reg").addEventListener('click', e => {
         console.log(data)
         if (data.total > 0) {
             console.log('found teacher')
-            addUser(data.items[0].name, data.items[0].dob, number, br)
-            sessionStorage.setItem('currUserId', data.items[0].name);
-            window.location.href = './profile.html';
+            getUserLocations(data.items[0].id, br).then((locs) => {
+                addUser(data.items[0].id, data.items[0].name, data.items[0].dob, number, br, locs).then((res) => {
+                    sessionStorage.setItem('currUserId', data.items[0].name);
+                    window.location.href = './profile.html';
+                })
+            })
         }
     })
 })
 
-
-async function addUser(full_name, birth_day, phone_number, city){
-
-    await setDoc(doc(db, "users", full_name), {
-        name: full_name,
-        number: phone_number,
-        brunch: city,
-        dob: birth_day
-      });
+function getUserLocations(id, brunch){
+    return getTeacherLessons(id, brunch).then((data) => {
+        let locs = []
+        const lessons = data.items
+        for (let i = 0; i < lessons.length; i++) {
+            if (locs.indexOf(lessons[i].room_id) == -1) {
+                locs.push(lessons[i].room_id)
+            }
+        }
+        console.log(locs)
+        return locs
+    })
 }
