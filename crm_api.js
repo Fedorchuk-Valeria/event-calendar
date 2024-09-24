@@ -7,7 +7,7 @@ async function crm_auth(){
     }
 
     var token = ""
-    return await fetch(url, {
+    return fetch(url, {
         method: "POST",
         headers: {},
         body: JSON.stringify(data),
@@ -30,7 +30,7 @@ async function find_teacher(number, br){
             "phone": number
         }
 
-        return await fetch(url, {
+        return fetch(url, {
             method: "POST",
             headers: head,
             body: JSON.stringify(data),
@@ -56,7 +56,7 @@ async function getTeacherLessons(crm_id, brunch){
             "status": 1,
         }
 
-        return await fetch(url, {
+        return fetch(url, {
             method: "POST",
             headers: head,
             body: JSON.stringify(data),

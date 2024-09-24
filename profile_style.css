@@ -62,3 +62,28 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+.loader {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #312f32;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}

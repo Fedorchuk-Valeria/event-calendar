@@ -20,6 +20,8 @@ window.addEventListener("load", (e) => {
           document.getElementById("locs").innerHTML += "<span>" + name + "</span>";
         })
       }
+      const loader = document.querySelector(".loader");
+      loader.classList.add('hidden');
     })
 });
 

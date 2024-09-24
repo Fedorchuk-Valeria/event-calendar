@@ -3,24 +3,28 @@
 <head>
     <title>Профиль</title>
     <link rel="stylesheet" type="text/css" href="profile_style.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
     <script type = "module" src="./profile.js"></script>
 </head>
 <body>
-    <section id="infoWithImage">
-        <img src="prof_image.png" width="150" height="150">
-        <section id="teacherInfo">
-            <p id="fullname"></p>
-            <b id="dob"></b>
-            <b id="brunch"></b>
+    <div>
+        <section id="infoWithImage">
+            <img src="prof_image.png" width="150" height="150">
+            <section id="teacherInfo">
+                <p id="fullname"></p>
+                <b id="dob"></b>
+                <b id="brunch"></b>
+            </section>
         </section>
-    </section>
-    <section>
-        <p>Телефон</p>
-        <span id="phone"></span>
-        <p>Телеграмм</p>
-        <input id="tg"></input>
-        <button id="update tg">OK</button>
-        <p>Локации</p>
-        <section id="locs"></section>
-    </section>
+        <section>
+            <p>Телефон</p>
+            <span id="phone"></span>
+            <p>Телеграмм</p>
+            <input id="tg"></input>
+            <button id="update tg">OK</button>
+            <p>Локации</p>
+            <section id="locs"></section>
+            <center><div class="loader"></div></center>
+        </section>
+    </div>
 </body>
