@@ -4,9 +4,9 @@ html {
 
 
 body {
+    background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     display: flex;
     flex-direction: column;
-    background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
     align-items: center;
     justify-content: center;
     padding: 5%;
