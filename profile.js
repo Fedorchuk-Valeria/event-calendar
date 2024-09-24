@@ -26,6 +26,6 @@ window.addEventListener("load", (e) => {
 });
 
 
-document.getElementById("update tg").addEventListener("click", (e) => {
+document.getElementById("updateTg").addEventListener("click", (e) => {
     updateUserTg(sessionStorage.getItem("currUserId"), document.getElementById("tg").value)
 })

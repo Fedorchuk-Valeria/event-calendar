@@ -1,0 +1,31 @@
+footer {
+    background-color: #AD98C3;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* div {
+    height: 20px;
+} */
+ 
+.footerButton {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    opacity: 50%;
+}
+
+.choosenButton {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    opacity: 100%;
+}
