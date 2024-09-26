@@ -1,0 +1,78 @@
+html {
+    height: 737px;
+    font-family: 'Inter';
+}
+
+
+body {
+    background: linear-gradient(170deg, #976FAB 0%, #D694B4 60%, #ECBBC1 88%, #F4CFD1 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+li {
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    position: relative;
+    margin-left: -20px;
+    margin-right: 20px;
+    width: 20px;
+}
+
+#weekDaysItems {
+    flex: 1;
+    margin-left: -20px;
+    margin-right: 20px;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+}
+
+#calendarCard {
+    background-color: #FFFF;
+    width: 400px;
+    box-shadow: 0 1rem 2.5rem rgb(27, 64, 94);
+}
+
+#calendarHeader {
+    padding: 0 20px;
+    color: #7D8994;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calendarBody {
+    border-top: 1px solid #ccc;
+
+}
+
+#calendarWeekDays {
+    display: flex;
+    justify-content: space-between;
+    color: #7D8994;
+}
+
+#calendarDays {
+    display: grid;
+    gap: 8px;
+    color: #000000;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    text-align: center;
+}
+
+#activeDay {
+    background: #8AE2CE;
+    border-radius: 10px;
+}
+
+#eventDay {
+    border: 2px solid;
+    border-color: #A8CFEE;
+    border-radius: 10px;
+}
