@@ -67,6 +67,17 @@ li {
     text-align: center;
 }
 
+#eventInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFFF;
+    border-radius: 30px;
+    width: 350px;
+    height: 335px;
+    margin-top: 20px;
+}
+
 .activeDay {
     background: #8AE2CE;
     border-radius: 10px;
