@@ -29,3 +29,7 @@ window.addEventListener("load", (e) => {
 document.getElementById("updateTg").addEventListener("click", (e) => {
     updateUserTg(sessionStorage.getItem("currUserId"), document.getElementById("tg").value)
 })
+
+document.getElementById("calendarButton").addEventListener("click", (e) => {
+  window.location.href = './calendar.html';
+})
