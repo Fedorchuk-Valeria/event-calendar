@@ -97,8 +97,8 @@ input {
     background-color: #FFFF;
     border-radius: 30px;
     width: 350px;
-    height: 335px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .activeDay {
