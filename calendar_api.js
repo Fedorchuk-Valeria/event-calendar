@@ -32,7 +32,7 @@ function getCurrDayDate(){
 }
 
 function getNumberOfMonthDays(year, month){
-    return new Date(year, month + 1, 0).getDate();
+    return new Date(year, Number(month) + 1, 0).getDate();
 }
 
 export {getCurrMonth, getCurrYear, getCurrWeekDay, getCurrDayDate, getNumberOfMonthDays, getWeekDay}

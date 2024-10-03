@@ -13,12 +13,16 @@ window.addEventListener("load", (e) => {
       document.getElementById("brunch").innerText = Brunchs[userData.brunch];
       document.getElementById("phone").innerText = userData.number;
       document.getElementById("tg").value = userData.telegram;
-      for (let i = 0; i < userData.locations.length; i++) {
-        console.log(userData.locations[i])
-        getLocationName(userData.locations[i].toString()).then((name) => {
-          console.log(name)
-          document.getElementById("locs").innerHTML += "<span>" + name + "</span>";
-        })
+      if(userData.role == "admin") {
+        document.getElementById("locs p").innerText = ""
+      } else {
+        for (let i = 0; i < userData.locations.length; i++) {
+          console.log(userData.locations[i])
+          getLocationName(userData.locations[i].toString()).then((name) => {
+            console.log(name)
+            document.getElementById("locs").innerHTML += "<span>" + name + "</span>";
+          })
+        }
       }
       const loader = document.querySelector(".loader");
       loader.classList.add('hidden');

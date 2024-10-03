@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { doc, setDoc, getFirestore, getDoc, updateDoc,
-  getDocs, collection } from  "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
+  getDocs, collection, query, where, addDoc } from  "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,5 +21,5 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export {
-  db, app, doc, setDoc, getDoc, updateDoc, getDocs, collection
+  db, app, doc, setDoc, getDoc, updateDoc, getDocs, collection, query, where, addDoc
 }

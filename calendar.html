@@ -4,13 +4,16 @@
     <title>Мероприятия</title>
     <link rel="stylesheet" type="text/css" href="calendar_style.css">
     <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="add_event_style.css">
     <script type = "module" src="./calendar.js"></script>
 </head>
 <body>
     <main id="calendarCard">
         <section id="calendarHeader">
             <h4 id="headerDay"></h4>
+            <i class="arrow" id="leftArrow"></i>
             <h4 id="headerDate"></h4>
+            <i class="arrow" id="rightArrow"></i>
         </section>
         <section id="calendarBody">
             <ul id="calendarWeekDays">
@@ -30,6 +33,15 @@
     <section id="eventInfo">
 
     </section>
+    <div id="addEventPage">
+        <input placeholder="Название" id="eventName"></input>
+        <input placeholder="Подробнее" id="eventDescription"></input>
+        <input placeholder="Дата" type="date" id="eventDate"></input>
+        <input placeholder="Время" type="time" id="eventTime"></input>
+        <input type="file" id="eventImage"></input>
+        <a href="#" id="addEventButton">Добавить</a>
+        <a href="#" style="background-color: #cacaca;">Отмена</a>
+    </div>
 </body>
 <footer>
     <button class="footerButton" id="usersButton">
