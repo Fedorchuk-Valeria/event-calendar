@@ -4,7 +4,6 @@ const Brunchs = { 1: "Минск", 2: 'Барановичи', 3: 'Борисов
 
 
 window.addEventListener("load", (e) => {
-    console.log("load")
     const name = sessionStorage.getItem("currUserId");
     document.getElementById("fullname").innerText = name;
 
@@ -17,9 +16,7 @@ window.addEventListener("load", (e) => {
         document.getElementById("locs p").innerText = ""
       } else {
         for (let i = 0; i < userData.locations.length; i++) {
-          console.log(userData.locations[i])
           getLocationName(userData.locations[i].toString()).then((name) => {
-            console.log(name)
             document.getElementById("locs").innerHTML += "<span>" + name + "</span>";
           })
         }

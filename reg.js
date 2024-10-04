@@ -1,5 +1,6 @@
+import { getCurrYear } from './calendar_api.js';
 import { find_teacher, getTeacherLessons } from './crm_api.js';
-import { addUser, getUser, checkAdmin } from './db_query.js';
+import { addUser, getUser, checkAdmin, addEvent, findBirthEvent } from './db_query.js';
 
 
 document.getElementById("reg").addEventListener('click', e => {
@@ -13,7 +14,7 @@ document.getElementById("reg").addEventListener('click', e => {
             if(res){
                 console.log(res)
                 sessionStorage.setItem('currUserId', res.name);
-                window.location.href = './profile.html';
+                addBirthdayEvent(res)
             } else {
                 find_teacher(number, br).then((data) => {
                     // get crm responce with items
@@ -27,7 +28,7 @@ document.getElementById("reg").addEventListener('click', e => {
                             getUserLocations(data.items[0].id, br).then((locs) => {
                                 addUser(data.items[0].id, data.items[0].name, data.items[0].dob, number, br, locs, tg).then((res) => {
                                     sessionStorage.setItem('currUserId', data.items[0].name);
-                                    window.location.href = './profile.html';
+                                    addBirthdayEvent(data.items[0])
                                 })
                             })
                         })
@@ -49,5 +50,20 @@ function getUserLocations(id, brunch){
             }
         }
         return locs
+    })
+}
+
+
+async function addBirthdayEvent(data){
+    console.log(data)
+    let dobArr = data.dob.split('.');
+    let dob = getCurrYear() + '-' + dobArr[1] + '-' + dobArr[0]
+    console.log(dob)
+    findBirthEvent(data.name, dob).then(async (res) => {
+        if(res) {
+            console.log('create ', dob)
+            await addEvent('День рождение', "У " + data.name,  dob, [])
+        }
+        window.location.href = './profile.html';
     })
 }

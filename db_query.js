@@ -103,4 +103,24 @@ async function checkAdmin(number){
     })
 }
 
-export { addUser, getUser, getLocationName, updateUserTg,  getEventsDates, getEventByDate, checkAdmin, addEvent}
+async function findBirthEvent(name, date) {
+    const docRef = collection(db, "events");
+    const q = query(docRef, where("description", "==", "У " + name));
+    const queryRes = await getDocs(q);
+    let res = true
+    queryRes.forEach((event) => {
+        console.log(event.data().name)
+        console.log("Find event")
+        if (event.data().date != date) {
+            res = true
+            console.log("date not ==")
+        } else {
+            res = false
+        }
+    });
+    console.log(res)
+    return res
+}
+
+
+export { addUser, getUser, getLocationName, updateUserTg,  getEventsDates, getEventByDate, checkAdmin, addEvent, findBirthEvent}
