@@ -1,6 +1,7 @@
 html {
-    height: 100%;
-    font-family: 'Inter';
+    position: fixed;
+    height: 900px;
+    width: 100%
 }
 
 
