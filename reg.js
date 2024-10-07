@@ -2,6 +2,20 @@ import { getCurrYear } from './calendar_api.js';
 import { find_teacher, getTeacherLessons } from './crm_api.js';
 import { addUser, getUser, checkAdmin, addEvent, findBirthEvent } from './db_query.js';
 
+window.addEventListener("load", (e) => {
+    var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
+    var link=document.createElement("link");
+    link.type="text/css";
+    link.rel="stylesheet";
+    console.log(IS_IPHONE)
+    if (IS_IPHONE) {
+        link.href="reg_style_iphone.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    } else {
+        link.href="reg_style.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    }
+})
 
 document.getElementById("reg").addEventListener('click', e => {
     const number = document.getElementById("phone").value;
