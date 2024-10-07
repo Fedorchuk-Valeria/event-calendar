@@ -1,6 +1,4 @@
 html {
-    position: fixed;
-    height: 900px;
     width: 100%
 }
 
@@ -20,8 +18,9 @@ span {
     margin-bottom: 5px;
     border-radius: 5px;
     height: 20px;
-    display: inline-block;
+    display: flex;
     width: 250px;
+    align-items: center;
 }
 
 input {
@@ -31,6 +30,12 @@ input {
     border: None;
     height: 20px;
     width: 200px;
+    vertical-align: baseline;
+}
+
+#profileImg {
+    width: 150px;
+    height: 150px
 }
 
 #updateTg {
@@ -88,4 +93,78 @@ input {
     opacity: 0;
     transition: opacity 0.5s ease-out;
     pointer-events: none;
+}
+
+@media (max-height: 2500px) {
+    html {
+        height: 2500px;
+    }
+}
+
+@media (max-height: 1500px) {
+    html {
+        height: 1500px;
+    }
+}
+
+@media (max-height: 1000px) {
+    html {
+        height: 1000px;
+    }
+}
+
+@media (max-height: 800px) {
+    html {
+        height: 800px;
+    }
+}
+
+@media (max-height: 500px) {
+    html {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1000px) {
+    span {
+        padding: 8px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        height: 80px;
+        width: 700px;
+        font-size: 50px;
+    }
+     
+    p {
+        font-size: 50px;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 10px;
+        height: 80px;
+        width: 580px;
+        font-size: 50px;
+    }
+
+    #updateTg {
+        padding: 15px;
+        margin: 5px;
+        border-radius: 8px;
+        width: 110px;
+        font-size: 40px;
+    }
+
+    #teacherInfo {
+        font-size: 48px;
+    }
+
+    #infoWithImage {
+        width: 700;
+    }
+
+    #profileImg {
+        width: 450px;
+        height: 450px
+    }
 }

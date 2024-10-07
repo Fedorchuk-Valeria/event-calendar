@@ -1,6 +1,5 @@
 html {
     position: fixed;
-    height: 900px;
     width: 100%
 }
 
@@ -75,6 +74,62 @@ button {
     font-family: 'Inter';
 }
 
+@media (max-height: 2500px) {
+    html {
+        height: 2500px;
+    }
+}
 
-/* @media (max-width: 1000px) {
-} */
+@media (max-height: 1500px) {
+    html {
+        height: 1500px;
+    }
+}
+
+@media (max-height: 1000px) {
+    html {
+        height: 1000px;
+    }
+}
+
+@media (max-height: 800px) {
+    html {
+        height: 800px;
+    }
+}
+
+@media (max-height: 500px) {
+    html {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1000px) {
+    select {
+        font-size: 50px;
+        border-radius: 20px;
+        width: 600px;
+        height: 120px;
+        padding: 5px;
+        margin: 8px;
+        margin-top: 30px;
+    }
+
+    input {
+        font-size: 50px;
+        border-radius: 20px;
+        margin: 5px;
+        width: 585px;
+        height: 105px;
+        padding: 5px;
+        font-family: 'Inter';
+    }
+
+    button {
+        font-size: 20px;
+        padding: 18px;
+        margin: 15px;
+        border-radius: 20px;
+        width: 150px;
+    }
+}
