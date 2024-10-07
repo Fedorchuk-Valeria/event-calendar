@@ -1,5 +1,7 @@
 html {
+    position: absolute;
     height: 100%;
+    width: 100%
 }
 
 
@@ -72,3 +74,7 @@ button {
     width: 70px;
     font-family: 'Inter';
 }
+
+
+/* @media (max-width: 1000px) {
+} */
