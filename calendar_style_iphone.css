@@ -20,8 +20,9 @@ li {
     position: relative;
     margin-left: -12px;
     margin-right: 27px;
-    width: 25px;
-    height: 25px;
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
 }
 
 a {
@@ -59,7 +60,7 @@ input {
 
 #calendarCard {
     background-color: #FFFF;
-    width: 350px;
+    width: 800px;
     box-shadow: 0 1rem 2.5rem rgb(27, 64, 94);
 }
 
@@ -69,11 +70,11 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 45px;
 }
 
 #calendarBody {
     border-top: 1px solid #ccc;
-
 }
 
 #calendarWeekDays {
@@ -97,9 +98,10 @@ input {
     flex-direction: column;
     background-color: #FFFF;
     border-radius: 30px;
-    width: 350px;
+    width: 800px;
     margin-top: 20px;
     padding-bottom: 20px;
+    font-size: 45px;
 }
 
 #eventInfo {
@@ -107,29 +109,30 @@ input {
     flex-direction: column;
     margin-left: 20px;
     font-family: 'Inter Light';
-    font-size: 18px;
     color: #000000;
-}
-
-img {
-    width: 180px;
-    height: 100px
+    font-size: 45px;
 }
 
 #eventInfoWithImage {
     display: flex;
-    width: 300px;
+    width: 750px;
+    margin-left: 20px
+}
+
+img {
+    width: 400px;
+    height: 300px;
 }
 
 .activeDay {
     background: #8AE2CE;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .eventDay {
-    border: 2px solid;
+    border: 5px solid;
     border-color: #A8CFEE;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .arrow {

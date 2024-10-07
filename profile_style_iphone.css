@@ -125,7 +125,7 @@ input {
     }
 }
 
-/* @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     span {
         padding: 8px;
         margin-bottom: 5px;
@@ -167,4 +167,4 @@ input {
         width: 450px;
         height: 450px
     }
-} */
+}

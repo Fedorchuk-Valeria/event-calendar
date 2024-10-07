@@ -2,7 +2,20 @@ import {getCurrMonth, getCurrYear, getCurrWeekDay,
     getCurrDayDate, getNumberOfMonthDays, getWeekDay} from "./calendar_api.js"
 import { getEventsDates, getEventByDate, getUser, addEvent } from "./db_query.js";
 
+
 window.addEventListener("load", (e) => {
+    var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
+    var link=document.createElement("link");
+    link.type="text/css";
+    link.rel="stylesheet";
+    console.log(IS_IPHONE)
+    if (IS_IPHONE) {
+        link.href="calendar_style_iphone.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    } else {
+        link.href="calendar_style.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    }
     getCurrentDayCalendarCard()
 })
 
@@ -150,7 +163,7 @@ function fillEventInfo(month, day){
             let res = '';
             if(content.length > 0){
                 res += '<section id="eventInfoWithImage">'
-                res += '<img id="evImage" width="120" height="100"></img>';
+                res += '<img id="evImage"></img>';
                 res += '<section id="eventInfo">'
             }
             if(hours != '3' && minutes != "00") {
