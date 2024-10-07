@@ -1,5 +1,8 @@
 html {
-    height: 737px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -9,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15%;
+    height: 50%;
 }
 
 .loader {
@@ -37,11 +40,11 @@ body {
 
 select {
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 200%;
     border-radius: 10px;
     border: 1px solid rgb(88, 86, 86);
-    width: 250px;
-    height: 40px;
+    width: 50%;
+    height: 8%;
     padding: 5px;
     margin: 5px;
     font-family: 'Inter';
@@ -49,26 +52,26 @@ select {
 
 input {
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 200%;
     border-radius: 10px;
     border: 1px solid rgb(88, 86, 86);
     margin: 5px;
-    width: 234px;
-    height: 25px;
+    width: 48.5%;
+    height: 6.5%;
     padding: 7px;
     font-family: 'Inter';
 }
 
 
 button {
-    font-size: 15px;
-    padding: 8px;
+    font-size: 150%;
+    padding: 1%;
     margin: 5px;
     background-color: #fff;
     color: #000000;
     border: none;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    width: 70px;
+    width: 13%;
     font-family: 'Inter';
 }
