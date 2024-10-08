@@ -36,3 +36,20 @@ footer {
     width: 30px;
     height: 30px;
 }
+
+@media (max-width: 1000px) {
+    .footerButtonImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footerButton {
+        margin-left: 55px;
+        margin-right: 55px;
+    }
+    
+    .choosenButton {
+        margin-left: 55px;
+        margin-right: 55px;
+    }
+}

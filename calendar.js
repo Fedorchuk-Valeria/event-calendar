@@ -5,15 +5,22 @@ import { getEventsDates, getEventByDate, getUser, addEvent } from "./db_query.js
 
 window.addEventListener("load", (e) => {
     var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
-    var link=document.createElement("link");
-    link.type="text/css";
-    link.rel="stylesheet";
     console.log(IS_IPHONE)
     if (IS_IPHONE) {
+        var link=document.createElement("link");
+        link.type="text/css";
+        link.rel="stylesheet";
         link.href="calendar_style_iphone.css";
         document.getElementsByTagName("head")[0].appendChild(link);
-    } else {
-        link.href="calendar_style.css";
+        link = document.createElement("link");
+        link.type="text/css";
+        link.rel="stylesheet";
+        link.href="footer_iphone.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+        link = document.createElement("link");
+        link.type="text/css";
+        link.rel="stylesheet";
+        link.href="add_event_style_iphone.css";
         document.getElementsByTagName("head")[0].appendChild(link);
     }
     getCurrentDayCalendarCard()
@@ -96,7 +103,13 @@ document.getElementById("addEventButton").addEventListener("click", (e) => {
         const month = ["Январь","Февраль","Март","Апрель","Май",
             "Июнь","Июль","Август","Сентябрь","Октябрь",
             "Ноябрь","Декабрь"];
+        console.log(name, description, date)
+        console.log(Array.from(byteFile).length)
+        if (Array.from(byteFile).length > 100000) {
+            return;
+        }
         addEvent(name, description, date, Array.from(byteFile)).then((data) => {
+            console.log("add event")
             const currYear = sessionStorage.getItem("currYear")
             const currMonth = sessionStorage.getItem("currMonth")
             const currDay = sessionStorage.getItem("currDay")
@@ -203,6 +216,7 @@ function getCurrentDayCalendarCard(){
     
 
     const currDay = Number(getCurrDayDate().slice(0, 2))
+    sessionStorage.setItem("currDay", currDay)
     fillCalendarCard(currYear, getCurrMonth()[0], getCurrMonth()[1], currDay, document)
     fillEventInfo(getCurrMonth()[0], currDay)
 }

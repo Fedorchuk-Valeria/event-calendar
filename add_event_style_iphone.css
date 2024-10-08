@@ -1,0 +1,19 @@
+#addEventPage {
+    text-align: center;
+    width: 600px;
+    height: 900px;
+    padding: 15px;
+    border-radius: 60px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    background-color: #eaeaea;
+    border: #000 solid 2px;
+}
+
+#addEventPage:target {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

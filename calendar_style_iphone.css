@@ -27,9 +27,9 @@ li {
 
 a {
     text-decoration: none;
-    font-size: 13px;
-    padding: 8px;
-    margin: 5px;
+    font-size: 43px;
+    padding: 12px;
+    margin: 25px;
     background-color: #AD98C3;
     color: #373737;
     border: none;
@@ -44,9 +44,10 @@ input {
     padding: 8px;
     border-radius: 5px;
     border: None;
-    height: 20px;
-    width: 200px;
+    height: 80px;
+    width: 450px;
     margin: 5px;
+    font-size: 40px;
 }
 
 #weekDaysItems {

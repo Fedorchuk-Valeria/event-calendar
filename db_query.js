@@ -49,12 +49,14 @@ async function updateUserTg(name, tg){
 
 
 async function addEvent(eventName, eventDesc, eventDate, imageBytes){
+    console.log("add to db")
     const docRef = await addDoc(collection(db, "events"), {
         name: eventName,
         description: eventDesc,
         date: eventDate,
         image: imageBytes
     });
+    console.log("added to db")
 }
 
 async function getEventsDates(month, year){

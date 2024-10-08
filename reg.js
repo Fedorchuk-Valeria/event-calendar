@@ -4,15 +4,12 @@ import { addUser, getUser, checkAdmin, addEvent, findBirthEvent } from './db_que
 
 window.addEventListener("load", (e) => {
     var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
-    var link=document.createElement("link");
-    link.type="text/css";
-    link.rel="stylesheet";
     console.log(IS_IPHONE)
     if (IS_IPHONE) {
+        var link=document.createElement("link");
+        link.type="text/css";
+        link.rel="stylesheet";
         link.href="reg_style_iphone.css";
-        document.getElementsByTagName("head")[0].appendChild(link);
-    } else {
-        link.href="reg_style.css";
         document.getElementsByTagName("head")[0].appendChild(link);
     }
 })
