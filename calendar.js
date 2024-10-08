@@ -106,6 +106,7 @@ document.getElementById("addEventButton").addEventListener("click", (e) => {
         console.log(name, description, date)
         console.log(Array.from(byteFile).length)
         if (Array.from(byteFile).length > 100000) {
+            alert("Неподходящий размер картинки")
             return;
         }
         addEvent(name, description, date, Array.from(byteFile)).then((data) => {
@@ -166,7 +167,6 @@ function fillEventInfo(month, day){
         + date + "</h3>"
         for (let i = 0; i < events.length; i++) {
             let eventDate = new Date(events[i].date);
-            console.log(eventDate)
             let hours = eventDate.getHours().toString();
             let minutes = eventDate.getMinutes().toString();
             if(minutes.length == 1){
@@ -176,18 +176,21 @@ function fillEventInfo(month, day){
             let res = '';
             if(content.length > 0){
                 res += '<section id="eventInfoWithImage">'
-                res += '<img id="evImage"></img>';
+                res += '<img id="evImage' + i + '"></img>';
                 res += '<section id="eventInfo">'
+            } else {
+                res += '<section id="eventInfo" style="align-items: center">'
             }
-            if(hours != '3' && minutes != "00") {
-                res += "<b>" + hours + ':' + minutes + "</b>"   
+            const time = hours + ':' + minutes;
+            if(time != "3:00" && time != "0:00") {
+                res += "<b>" + time + "</b>" 
             }
             res += "<span>" + events[i].name + "</span>"
             res += "<i>" + events[i].description + "</i>"
+            res += '</section></section>';
             if(content.length > 0){
-                res += '</section></section>';
                 document.getElementById("eventsInfo").innerHTML += res;
-                document.getElementById('evImage').src = URL.createObjectURL(
+                document.getElementById('evImage' + i).src = URL.createObjectURL(
                     new Blob([content.buffer], { type: 'image/png' })
                 );
             } else {
@@ -237,5 +240,6 @@ function readFile(file) {
 }
 
 async function getAsByteArray(file) {
+    if (file === undefined) {return []}
     return new Uint8Array(await readFile(file))
 }
